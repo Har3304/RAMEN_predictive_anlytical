@@ -6,9 +6,6 @@ import torch.optim as optim
 from sklearn.preprocessing import StandardScaler
 from collections import defaultdict
 
-
-
-
 SIM_DAYS        = 7       
 BATCH_MINUTES   = 60      
 BATCH_SIZE      = 128     
@@ -21,9 +18,6 @@ DEVICE          = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Device : {DEVICE}")
 print(f"Config : SIM_DAYS={SIM_DAYS}  BATCH_MIN={BATCH_MINUTES}"
       f"  BATCH_SIZE={BATCH_SIZE}  WARMUP={WARMUP_BATCHES}\n")
-
-
-
 
 print("[1/4] Loading & cleaning dataset ...")
 df = pd.read_csv("uber.csv")
